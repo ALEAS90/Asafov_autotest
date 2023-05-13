@@ -23,9 +23,10 @@ def josephus_task(num_people, kill_num):
     bez_ubityh = []
 
     for i, value in enumerate(spisok):
-        if i+1 != kill_num:
+        if i+1 != kill_num and len(spisok) != 1:
             bez_ubityh.append(value)
     print(bez_ubityh)
+
     survivor = 1
 
 
