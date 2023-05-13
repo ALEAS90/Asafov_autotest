@@ -15,19 +15,28 @@
 
 def josephus_task(num_people, kill_num):
     num = 1
+    len_list = num_people
+    print(len_list)
     spisok = []
+
+    """ создаем список из 1,2,3 и т.д. равный длине первого числа"""
+
     for j in range(num_people):
+
         spisok.append(num)
         num += 1
+        len_list -= 1
     print(spisok)
     bez_ubityh = []
 
-    for i, value in enumerate(spisok):
-        if i+1 != kill_num and len(spisok) != 1:
-            bez_ubityh.append(value)
-    print(bez_ubityh)
+        # for i, value in enumerate(spisok):
+        #     if i+1 != kill_num and len(spisok) != 1:
+        #         bez_ubityh.append(value)
+        # num_people = spisok
 
-    survivor = 1
+
+
+
 
 
     return survivor
