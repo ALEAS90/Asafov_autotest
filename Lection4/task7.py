@@ -15,7 +15,7 @@ def move_zeros(lst):
     print(nullses)
     print(not_nulses)
     print(lst)
-    # Здесь нужно написать код
+
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
