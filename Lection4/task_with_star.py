@@ -13,12 +13,15 @@
 
 def max_division_by_3(num):
     a = list(str(num))
+    print(a)
     sum = 0
     for i in a:
-        sum = sum + int(i)
+        sum += int(i)  #sum = sum + int(i)
+        print(sum)
     t = 0
     if sum % 3 != 0:
         t = 3 - sum % 3
+        print(t)
 
 
     for count, i in enumerate(a):
