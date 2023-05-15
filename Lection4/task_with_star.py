@@ -16,7 +16,29 @@ def max_division_by_3(num):
     sum = 0
     for i in a:
         sum = sum + int(i)
+    t = 0
+    if sum % 3 != 0:
+        t = 3 - sum % 3
 
+
+    for count, i in enumerate(a):
+        if (t > 0) and (int(i) < 9) and (int(i) > 6):
+            a[count] = int(a[count]) + t
+            break
+        elif int(i) < 1:
+            a[count] = int(a[count]) + t + 9
+            break
+        elif int(i) < 3:
+            a[count] = int(a[count]) + t + 6
+            break
+        elif int(i) < 7:
+            a[count] = int(a[count]) + t + 3
+            break
+    new_num = ''
+    for i in a:
+        new_num = new_num + str(i)
+    print(new_num)
+    return int(new_num)
 
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
