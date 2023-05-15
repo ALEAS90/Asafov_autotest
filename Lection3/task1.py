@@ -2,13 +2,23 @@
 # В исходном списке минимум 2 элемента.
 
 def modification(lst):
+    """старый вариант решения"""
+    # print(lst)
+    # new_lst = []
+    # new_lst.append(lst[-1])
+    # for i in lst[1:-1]:
+    #     new_lst.append(i)
+    # new_lst.append(lst[0])
+    # print(new_lst)
+
+    """новый вариант решения после доработки"""
+    lst.insert(0,lst[-1])
+    lst.append(lst[1])
+    lst.pop(1)
+    lst.pop(-2)
+    # lst.pop(1)
     print(lst)
-    new_lst = []
-    new_lst.append(lst[-1])
-    for i in lst[1:-1]:
-        new_lst.append(i)
-    new_lst.append(lst[0])
-    print(new_lst)
+    new_lst = lst
 
     return new_lst
 
