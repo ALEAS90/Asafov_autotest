@@ -14,39 +14,21 @@
 # [4] => 1 вышел, 4 остался последним т.е. выжившим - это наш ответ survivor.
 
 def josephus_task(num_people, kill_num):
-    num = 1
-    len_list = num_people
-    print(len_list)
-    spisok = []
-
-
-    survivor = []
-
-    """ создаем список из 1,2,3.... и т.д. равный длине первого числа"""
-
-    for j in range(num_people):
-
-        spisok.append(num)
-
-        num += 1
-        print(spisok)
-    print(len_list)
-
-    print(spisok)
-
-
-
-    """До тех пор, пока длина списка не станет равно единице, удаляем каждого kill_num по счету"""
-
-    while len_list != 1:
-        for i, value in enumerate(spisok):
-            if i == kill_num or i % kill_num == 0:
-                spisok.pop(i+2)
-
-        print(spisok)
-
-
+    survivor = 0
+    for item in range(1, num_people + 1):
+         survivor = (survivor + kill_num) % item
     print(survivor)
+    return survivor + 1
+
+
+
+
+
+
+
+
+
+
 
 
 
