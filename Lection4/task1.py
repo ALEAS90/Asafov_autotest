@@ -12,10 +12,10 @@ def which_triangle(a, b, c):
         type_triangle = "Равнобедренный"
     elif a != b != c and a != c != b and (a + b > c and a + c > b and c + b > a):
         type_triangle = "Обычный"
-    elif a + b < c and a + c < b and c + b < a:
+    elif a + b <= c or a + c <= b or c + b <= a:
         type_triangle = "Не треугольник"
-    else:
-        type_triangle = "Не треугольник"
+    # else:
+    #     type_triangle = "Не треугольник"
 
     return type_triangle
 
