@@ -8,16 +8,16 @@
 
 def repeats(our_str):
     our_str_lst = list(our_str)
-    print(our_str_lst)
+    # print(our_str_lst)
 
     result = {}
     for i in our_str_lst:
         if i in result:
             result.get(f'{i}_{result[i]}', end=' ')
         else:
-            result.get(i)
+            result.get(f'{i}_{result[i]}', end=' ')
                 # (i, end=' ')
-    result[i] = result.get(i, 0) + 1
+        # result[i] = result.get(i, 0) + 1
     print(result)
     print(result)
 
