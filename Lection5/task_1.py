@@ -8,10 +8,16 @@
 
 def letter_stat(our_str):
     letters_dict_1 = {}
+    count_symbol = ""
+    for i in  our_str:
+        if i not  in count_symbol:
+            print((f"{i}: {our_str.count(i)}"))
+            count_symbol += i
+            print(count_symbol)
 
     print(letters_dict_1)
     for i, v in enumerate(our_str):
-        letters_dict_1.setdefault(v,i+1)
+        letters_dict_1.setdefault(v,count(i))
 
     print(letters_dict_1)
     # for k, v in letters_dict_1.i
