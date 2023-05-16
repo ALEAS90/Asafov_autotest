@@ -7,21 +7,21 @@
 
 
 def letter_stat(our_str):
-    letters_dict = {}
-    our_str_str = []
-    for i in our_str:
-        our_str_str += i
-    keys = []
-    values = []
-    for k, v in enumerate (our_str_str):
-        keys.append(k)
-        values.append(v)
+    letters_dict_1 = {}
 
-    print(keys)
-    print((values))
-    for i in values:
-        letters_dict: i
-    letters_dict += {values: values for }
+    print(letters_dict_1)
+    for i, v in enumerate(our_str):
+        letters_dict_1.setdefault(v,i+1)
+
+    print(letters_dict_1)
+    # for k, v in letters_dict_1.i
+    #     keys.append(k)
+    #     values.append(v)
+    #
+    # print(keys)
+    # print((values))
+    # for i in values:
+    #    letters_dict.items()
 
 
     # keys = our_str.ke
