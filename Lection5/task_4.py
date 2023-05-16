@@ -14,16 +14,19 @@
 
 
 def scrabble(word):
+    points = ''
+    dct = {
+        ['д','к','л','м','п','у']: 2, ['а','в','е','ё','и','н','о','р','с','т']: 1, ['б','г','ь','а','я']: 3,
+        ['й','ы']: 4, ['ж','з','х','ц','ч']: 5, ['ф','ш','э','ю']: 8, ['щ']: 10, ['ъ']: 15
+    }
     point = ()
     for key in word:
-        if word in key:
-            return dct.get(key)
+        if word in dct.keys():
+            points += dct.values()
+        print(points)
+            # return dct.get(key)
 
-    dct = {
-        'авеёинорст': 1, 'дклмпу': 2, 'бгьая': 3,
-        'йы': 4, 'жзхцч': 5, 'фшэю': 8, 'щ': 10, 'ъ': 15
-    }
-    points = (sum(map(scrabble, input())))
+        # points = (sum(map(scrabble, input())))
     return points
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
