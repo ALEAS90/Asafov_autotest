@@ -7,34 +7,11 @@
 
 
 def letter_stat(our_str):
-    letters_dict_1 = {}
-    count_symbol = ""
-    set_num = set()
+    letters_dict = dict.fromkeys(our_str, 0)
+    for c in our_str:
+        letters_dict[c] +=1
+    print(letters_dict)
 
-    for i,v in enumerate(our_str):
-        if v is not
-        set_num.update(v)
-    print(set_num)
-
-
-    print(letters_dict_1)
-    print(count_symbol)
-    # for index, value in enumerate(our_str):
-    #     letters_dict_1.update(
-
-    print(letters_dict_1)
-    # for k, v in letters_dict_1.i
-    #     keys.append(k)
-    #     values.append(v)
-    #
-    # print(keys)
-    # print((values))
-    # for i in values:
-    #    letters_dict.items()
-
-
-    # keys = our_str.ke
-    # our_str_str = []
 
 
 
