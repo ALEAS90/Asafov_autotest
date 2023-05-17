@@ -13,18 +13,23 @@
 # курс --> 6 (к=2, у=2, р=1, с=1)
 
 
-def scrabble(word):
-    points = []
+def scrabble(word): #курс
+    values_dct = []
     keyss = []
     values = 0
     dct = {
-        'авеёинорст': 1, 'дклмпу': 2, 'бгьая': 3,
-        'йы': 4, 'жзхцч': 5, 'фшэю': 8, 'щ': 10, 'ъ': 15}
+         1: 'авеёинорст', 2: 'дклмпу', 3: 'бгьая', 4: 'йы', 5: 'жзхцч', 8: 'фшэю', 10: 'щ', 15: 'ъ'}
     # print(dct.keys())
-    for key in dct.keys():
-        if words in key.split():
-            points.append(dct.values())
-    print(points)
+    for i in word:
+
+        values_dct += dct.values()
+        print(values_dct)
+    #     print(values_dct)
+    #      if i in dct.values()
+    #     in dct.values():
+    #     if words in key.split():
+    #         points.append(dct.values())
+    # print(points)
 
 
     # point = ()
