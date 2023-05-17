@@ -14,17 +14,25 @@
 
 
 def scrabble(word):
-    points = ''
+    points = []
+    keyss = []
+    values = 0
     dct = {
-        ['д','к','л','м','п','у']: 2, ['а','в','е','ё','и','н','о','р','с','т']: 1, ['б','г','ь','а','я']: 3,
-        ['й','ы']: 4, ['ж','з','х','ц','ч']: 5, ['ф','ш','э','ю']: 8, ['щ']: 10, ['ъ']: 15
-    }
-    point = ()
-    for key in word:
-        if word in dct.keys():
-            points += dct.values()
-        print(points)
-            # return dct.get(key)
+        'авеёинорст': 1, 'дклмпу': 2, 'бгьая': 3,
+        'йы': 4, 'жзхцч': 5, 'фшэю': 8, 'щ': 10, 'ъ': 15}
+    # print(dct.keys())
+    for key in dct.keys():
+        if words in key.split():
+            points.append(dct.values())
+    print(points)
+
+
+    # point = ()
+    # for key in word:
+    #     if word in dct.keys[]:
+    #         points += dct.values()
+    #     print(points)
+    #         # return dct.get(key)
 
         # points = (sum(map(scrabble, input())))
     return points
