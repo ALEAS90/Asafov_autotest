@@ -16,37 +16,19 @@
 def scrabble(word): #курс   к
     values_dct = []
     keyss = []
-    values = 0
-    points = []
+    points = 0
     dct = {
          1: 'авеёинорст', 2: 'дклмпу', 3: 'бгьая', 4: 'йы', 5: 'жзхцч', 8: 'фшэю', 10: 'щ', 15: 'ъ'}
-    print(dct.items())
+    # print(dct.items())
     for i in word:
-        if i in dct.values():
-            print(i)
-
-    # for i in word:
-    #     if i in dct.values():
-    #     values_dct += dct.items()
-    #        values += dct.keys()
-    #     print(values)
-        # print(values_dct)
-    #     print(values_dct)
-    #      if i in dct.values()
-    #     in dct.values():
-    #     if words in key.split():
-    #         points.append(dct.values())
-    # print(points)
+        for key, v in dct.items():
+            if i in v:
+                # print(i, v)
+                points += key
+        else:
+            points =0
 
 
-    # point = ()
-    # for key in word:
-    #     if word in dct.keys[]:
-    #         points += dct.values()
-    #     print(points)
-    #         # return dct.get(key)
-
-        # points = (sum(map(scrabble, input())))
     return points
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
