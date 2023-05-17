@@ -6,16 +6,19 @@
 # 'letter' --> l_1e_1t_1t_2e_2_r_1
 
 
-def repeats(our_str):
-    our_str_lst = list(our_str)
+def repeats(our_str): # l
     # print(our_str_lst)
 
-    result = {}
-    for i in our_str_lst:
-        if i in result:
-            result.get(f'{i}_{result[i]}', end=' ')
-        else:
-            result.get(f'{i}_{result[i]}', end=' ')
+    result = ''
+    count = 1
+    for i in our_str:
+
+        result += i + '_' + str(result.count(i)+1)
+        # print(result)
+        #
+        #     result.get(f'{i}_{result[i]}', end=' ')
+        # else:
+        #     result.get(f'{i}_{result[i]}', end=' ')
                 # (i, end=' ')
         # result[i] = result.get(i, 0) + 1
     print(result)
