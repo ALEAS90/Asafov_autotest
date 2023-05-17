@@ -11,6 +11,7 @@
 
 
 def to_roman(data):
+    result = 0
     ones = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
     tens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
     hunds = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
@@ -20,9 +21,10 @@ def to_roman(data):
     h = hunds[data // 100 % 10]
     te = tens[data // 10 % 10]
     o = ones[data % 10]
+    result = t + h + te + o
 
-    return t + h + te + o
-    # return result
+    return result
+
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
