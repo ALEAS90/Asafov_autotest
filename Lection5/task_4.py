@@ -17,13 +17,20 @@ def scrabble(word): #курс   к
     values_dct = []
     keyss = []
     values = 0
+    points = []
     dct = {
-         1: 'а','в','е','ё','и','н','о','р','с','т' 2: 'д','к','л','м','п','у',3: 'б', 'г','ь','а','я', 4: 'й','ы', 5: 'ж','з','х','ц','ч', 8: 'ф','ш','э','ю', 10: 'щ', 15: 'ъ'}
-    # print(dct.keys())
+         1: 'авеёинорст', 2: 'дклмпу', 3: 'бгьая', 4: 'йы', 5: 'жзхцч', 8: 'фшэю', 10: 'щ', 15: 'ъ'}
+    print(dct.items())
     for i in word:
+        if i in dct.values():
+            print(i)
 
-        values_dct += dct.values()
-        print(values_dct)
+    # for i in word:
+    #     if i in dct.values():
+    #     values_dct += dct.items()
+    #        values += dct.keys()
+    #     print(values)
+        # print(values_dct)
     #     print(values_dct)
     #      if i in dct.values()
     #     in dct.values():
