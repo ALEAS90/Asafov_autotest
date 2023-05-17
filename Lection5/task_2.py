@@ -7,22 +7,14 @@
 
 
 def repeats(our_str): # l
-    # print(our_str_lst)
+
 
     result = ''
     count = 1
     for i in our_str:
 
         result += i + '_' + str(result.count(i)+1)
-        # print(result)
-        #
-        #     result.get(f'{i}_{result[i]}', end=' ')
-        # else:
-        #     result.get(f'{i}_{result[i]}', end=' ')
-                # (i, end=' ')
-        # result[i] = result.get(i, 0) + 1
-    print(result)
-    print(result)
+
 
 
     return(result)
