@@ -6,10 +6,9 @@
 # 'letter' --> l_1e_1t_1t_2e_2_r_1
 
 
-def repeats(our_str):  # l
+def repeats(our_str):
 
     result = ''
-    count = 1
     for i in our_str:
         result += i + '_' + str(result.count(i) + 1)
 
