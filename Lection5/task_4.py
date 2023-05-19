@@ -20,9 +20,9 @@ def scrabble(word):
         1: 'авеёинорст', 2: 'дклмпу', 3: 'бгья', 4: 'йы', 5: 'жзхцч', 8: 'фшэю', 10: 'щ', 15: 'ъ'}
 
     for i in word:
-        for key, v in dct.items():
-            if i in v:
-                print(i, v)
+        for key, value in dct.items():
+            if i in value:
+                print(i, value)
                 points += key
 
     return points
