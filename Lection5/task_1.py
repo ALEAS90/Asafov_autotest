@@ -8,8 +8,8 @@
 
 def letter_stat(our_str):
     letters_dict = dict.fromkeys(our_str, 0)
-    for c in our_str:
-        letters_dict[c] += 1
+    for letter in our_str:
+        letters_dict[letter] += 1
     print(letters_dict)
 
     return letters_dict
