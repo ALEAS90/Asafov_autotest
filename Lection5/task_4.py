@@ -15,14 +15,13 @@
 
 def scrabble(word):
     points = 0
-    i_index = 0
     dct = {
         1: 'авеёинорст', 2: 'дклмпу', 3: 'бгья', 4: 'йы', 5: 'жзхцч', 8: 'фшэю', 10: 'щ', 15: 'ъ'}
 
-    for i in word:
+    for item in word:
         for key, value in dct.items():
-            if i in value:
-                print(i, value)
+            if item in value:
+                print(item, value)
                 points += key
 
     return points
