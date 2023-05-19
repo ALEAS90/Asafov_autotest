@@ -9,8 +9,8 @@
 def repeats(our_str):
 
     result = ''
-    for i in our_str:
-        result += i + '_' + str(result.count(i) + 1)
+    for word in our_str:
+        result += word + '_' + str(result.count(word) + 1)
 
     return result
 
