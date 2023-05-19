@@ -17,7 +17,6 @@
 # Анна Самохина: Фродо, 3
 #
 
-
 def everything_for_your_cat(cats_data):
     # d = {}
     # for nick, age, name, surname in cats_data:

@@ -23,7 +23,6 @@ def to_roman(data):
     o = ones[data % 10]
     result = t + h + te + o
 
-
     return result
 
 
@@ -35,7 +34,6 @@ data = [1133, 2224, 1938, 1817, 2505, 391, 3743, 1634, 699, 1666, 1494, 1444]
 test_data = [
     "MCXXXIII", "MMCCXXIV", "MCMXXXVIII", "MDCCCXVII", "MMDV", "CCCXCI", 'MMMDCCXLIII', 'MDCXXXIV', 'DCXCIX', 'MDCLXVI',
     'MCDXCIV', 'MCDXLIV']
-
 
 for i, d in enumerate(data):
     assert to_roman(d) == test_data[i], f'С набором {d} есть ошибка, не проходит проверку'
