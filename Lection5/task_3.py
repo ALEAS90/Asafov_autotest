@@ -27,6 +27,7 @@ def everything_for_your_cat(cats_data):
         our_str += ' '.join(human_name) + ': ' + '; '.join(cats_info, ) + '\n'
     return our_str
 
+
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
