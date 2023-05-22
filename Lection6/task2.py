@@ -13,7 +13,6 @@ def global_function():
 
     local_function()
 
-
     return msg
 
 
