@@ -11,18 +11,16 @@
 
 
 def to_roman(data):
-    result = 0
     ones = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
     tens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
     hunds = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
     thous = ["", "M", "MM", "MMM", "MMMM"]
 
-    t = thous[data // 1000]
-    h = hunds[data // 100 % 10]
-    te = tens[data // 10 % 10]
-    o = ones[data % 10]
-    result = t + h + te + o
-
+    thousand = thous[data // 1000]
+    hundred = hunds[data // 100 % 10]
+    ten_rb = tens[data // 10 % 10]
+    units = ones[data % 10]
+    result = thousand + hundred + ten_rb + units
 
     return result
 
@@ -35,7 +33,6 @@ data = [1133, 2224, 1938, 1817, 2505, 391, 3743, 1634, 699, 1666, 1494, 1444]
 test_data = [
     "MCXXXIII", "MMCCXXIV", "MCMXXXVIII", "MDCCCXVII", "MMDV", "CCCXCI", 'MMMDCCXLIII', 'MDCXXXIV', 'DCXCIX', 'MDCLXVI',
     'MCDXCIV', 'MCDXLIV']
-
 
 for i, d in enumerate(data):
     assert to_roman(d) == test_data[i], f'С набором {d} есть ошибка, не проходит проверку'

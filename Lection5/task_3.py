@@ -17,22 +17,15 @@
 # Анна Самохина: Фродо, 3
 #
 
-
 def everything_for_your_cat(cats_data):
-    # d = {}
-    # for nick, age, name, surname in cats_data:
-    #     key = f'{name} {surname}'
-    #     d.setdefault(key, []).append(f'{nick}, {age}')
-    # print(d)
     result = {}
     our_str = ''
     for cat in cats_data:
         temp = cat[0] + ', ' + str(cat[1])
         result.setdefault(cat[2:], []).append(temp)
-    for k, v in result.items():
-        our_str += ' '.join(k) + ': ' + '; '.join(v,) + '\n'
+    for human_name, cats_info in result.items():
+        our_str += ' '.join(human_name) + ': ' + '; '.join(cats_info, ) + '\n'
     return our_str
-
 
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
