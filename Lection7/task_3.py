@@ -34,18 +34,44 @@ class PublicTransport:
 
     @property
     def info(self):
-        print(self.brand, self.color, self.year, self._engine_power)
+        return f"Brand: {self.brand}, Color: {self.color}, Year: {self.year}, Engine Power: {self._engine_power}"
 
 class Bus(PublicTransport):
-    def __init__(self, passengers, park, fare):
+    def __init__(self, brand, engine_power, year, color, max_speed, passengers, park, fare):
+        super().__init__(brand, engine_power, year, color, max_speed)
         self.passengers = passengers
         self.__park = park
         self._fare = fare
-        if fare <= 1000:
-    #при присвоении проверять номер парка, что он в диапазоне от 1000 до 9999
+        # PublicTransport.__init__(self, brand, engine_power, year, color, max_speed)
+
+
+    @property
+    def park(self):
+        return self.__park
+
+    @park.setter
+    def park(self, park_value):
+
+        if 1000 <= park_value <= 9999:
+            self.__park = park_value
+        else:
+            raise AssertionError('Парк приписки автобуса вне диапазона')
 
 
 
+
+
+class Tram(PublicTransport):
+    def __init__(self, brand, engine_power, year, color, max_speed, route, path, fare):
+        super().__init__(brand, engine_power, year, color, max_speed)
+        self.__route = route
+        self.path = path
+        self._fare = fare
+
+    @property
+    def how_long(self):
+
+        return self.max_speed / (4 * self.path)
 
 
 
