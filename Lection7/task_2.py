@@ -29,16 +29,25 @@ class PersonInfo:
 
     def short_name(self):
         short = str(self.name).split(" ")
-
         print(short)
-        return short[1] + " " + short[0] + "."
+
+        print(short[1] + " " + str(short[0])[0] + ".")
+        return short[1] + " " + str(short[0])[0] + "."
 
 
     def path_deps(self):
-        return ' -->'.join(self.path)
+        return ' --> '.join(self.path)
 
     def new_salary(self):
+        letter_counts = {}
+        for department in self.path:
+            for letter in department:
+                letter_counts[letter] = letter_counts.get(letter, 0) + 1
 
+        top_letters = sorted(letter_counts, key=letter_counts.get, reverse=True)[:3]
+        total_count = sum(letter_counts[letter] for letter in top_letters)
+
+        return 1337 * self.age * total_count
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
