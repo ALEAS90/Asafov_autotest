@@ -18,7 +18,7 @@ class Segment:
         self.dot2_y = dot2[1]  # Координата y второй точки
 
     def length(self):
-        length_seg = (((self.dot2_x - self.dot1_x) ** 2) + ((self.dot2_y - self.dot1_y) ** 2)) ** 0.5
+        length_seg = (((self.dot2_x - self.dot1_x) ** 2) + ((self.dot2_y - self.dot1_y) ** 2)) ** 0.5  # формула длины отрезка (х2— х1)**2 + (y2— y1)**2
         return round(length_seg, 2)
 
     def x_axis_intersection(self):
