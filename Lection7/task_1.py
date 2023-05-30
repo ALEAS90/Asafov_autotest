@@ -29,10 +29,7 @@ class Segment:
             return False
 
     def y_axis_intersection(self):
-        """
-        Проверяет пересечение отрезком оси ординат
-        :return: возвращает True - если пересекает и False - если не пересекает
-        """
+
         if self.dot1_y <= 0 <= self.dot2_y or self.dot1_y >= 0 >= self.dot2_y:
             return True
         else:
