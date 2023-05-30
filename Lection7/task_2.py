@@ -30,6 +30,11 @@ class PersonInfo:
     def short_name(self):
         pass
 
+    def path_deps(self):
+        pass
+
+    def new_salary(self):
+        pass
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
