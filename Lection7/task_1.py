@@ -12,10 +12,10 @@
 class Segment:
 
     def __init__(self, dot1, dot2):
-        self.dot1_x = dot1[0]
-        self.dot1_y = dot1[1]
-        self.dot2_x = dot2[0]
-        self.dot2_y = dot2[1]
+        self.dot1_x = dot1[0]  # Координата x первой точки
+        self.dot1_y = dot1[1]  # Координата y первой точки
+        self.dot2_x = dot2[0]  # Координата x второй точки
+        self.dot2_y = dot2[1]  # Координата y второй точки
 
     def length(self):
         length_seg = (((self.dot2_x - self.dot1_x) ** 2) + ((self.dot2_y - self.dot1_y) ** 2)) ** 0.5
