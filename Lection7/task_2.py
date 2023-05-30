@@ -22,19 +22,23 @@
 # 1337*32*9 = 385056
 
 class PersonInfo:
-    def __init__(self, name, age, path):
+    def __init__(self, name, age, *path):
         self.name = name
         self.age = age
         self.path = path
 
     def short_name(self):
-        pass
+        short = str(self.name).split(" ")
+
+        print(short)
+        return short[1] + " " + short[0] + "."
+
 
     def path_deps(self):
-        pass
+        return ' -->'.join(self.path)
 
     def new_salary(self):
-        pass
+
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
