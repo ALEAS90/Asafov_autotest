@@ -31,8 +31,8 @@ class PersonInfo:
         short = str(self.name).split(" ")
         print(short)
 
-        print(short[1] + " " + str(short[0])[0] + ".")
-        return short[1] + " " + str(short[0])[0] + "."
+        # print(short[1] + " " + str(short[0])[0] + ".")
+        return short[1] + " " + str(short[0])[0] + "."  # возвращаем первый элемент (фамилию) полностю + нулевой элемент от имени (Инициал Имени)
 
 
     def path_deps(self):
