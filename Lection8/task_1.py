@@ -25,15 +25,15 @@ def treatment_sum(our_tuple):
         return sum
 
     except (TypeError, ValueError):
-        sum = ("Нельзя сложить эти данные")
+
         print(our_tuple)
-        return sum
+        return "Нельзя сложить эти данные"
     except IndexError:
-        sum = ('Недостаточно данных')
-        return sum
+        return 'Недостаточно данных'
     if len(our_tuple) >= 3:
         print(our_tuple)
         raise Exception('Много данных')
+
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
