@@ -17,19 +17,22 @@
 import unittest  # Не удалять
 
 def treatment_sum(our_tuple):
-    sum = 0
-    if len(our_tuple) == 2:
-        try:
-            for i in our_tuple:
-                if type(i) == int:
-                    sum += i
+    sum = None
+    # if len(our_tuple) == 2:
+    try:
+        sum = our_tuple[0] + our_tuple[1]
+        print(sum)
+        return sum
 
-        except (TypeError, ValueError):
-            print("Нельзя сложить эти данные")
-        except IndexError:
-            print('Недостаточно данных')
-    else:
-        raise IndexError
+    except (TypeError, ValueError):
+        sum = ("Нельзя сложить эти данные")
+        return sum
+    except IndexError:
+        sum = ('Недостаточно данных')
+        return sum
+    if len(our_tuple) >> 2:
+        raise Exception('Много данных')
+
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
