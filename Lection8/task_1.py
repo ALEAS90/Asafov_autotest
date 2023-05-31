@@ -21,16 +21,18 @@ def treatment_sum(our_tuple):
     # if len(our_tuple) == 2:
     try:
         sum = our_tuple[0] + our_tuple[1]
-        print(sum)
+        print(our_tuple)
         return sum
 
     except (TypeError, ValueError):
         sum = ("Нельзя сложить эти данные")
+        print(our_tuple)
         return sum
     except IndexError:
         sum = ('Недостаточно данных')
         return sum
-    if len(our_tuple) >> 2:
+    if len(our_tuple) >= 3:
+        print(our_tuple)
         raise Exception('Много данных')
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
