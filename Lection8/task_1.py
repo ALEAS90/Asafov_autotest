@@ -26,6 +26,7 @@ def treatment_sum(our_tuple):
 
         return sum
 
+
     except (TypeError, ValueError):
 
         # print(our_tuple)
