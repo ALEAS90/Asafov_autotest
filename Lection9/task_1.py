@@ -7,8 +7,19 @@ from pathlib import Path
 path = Path('C:/development/pythonProject/Lection9/test_file/task1_data.txt')
 print((path.is_file()))
 file = open(path, mode='r', encoding='utf-8')
-for i in file.readlines():
-    print(i)
+# print(file.read())
+line = ''
+
+for line in file.readlines():
+    for symbol in line:
+        if symbol.isdigit() == False:
+            line += symbol
+
+
+
+
+    # print(line)
+
 
 
 
