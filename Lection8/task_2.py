@@ -32,13 +32,6 @@ class Trigon:
         if args[0] + args[1] <= args[2] or args[0] + args[2] <= args[1] or args[2] + args[1] <= args[0]:
             raise Exception("Не треугольник")
 
-        # except TypeError:
-        #     return 'Стороны должны быть числами'
-        # except ValueError:
-        #     return 'Стороны должны быть положительными'
-        #
-        # else:
-        #     raise Exception('Не треугольник')
 
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
