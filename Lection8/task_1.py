@@ -16,6 +16,7 @@
 
 import unittest  # Не удалять
 
+
 def treatment_sum(our_tuple):
     sum = None
     # if len(our_tuple) == 2:
@@ -30,8 +31,7 @@ def treatment_sum(our_tuple):
         return "Нельзя сложить эти данные"
     except IndexError:
         return 'Недостаточно данных'
-    if len(our_tuple) >= 3:
-        print(our_tuple)
+    if len(our_tuple) > 2:
         raise Exception('Много данных')
 
 
