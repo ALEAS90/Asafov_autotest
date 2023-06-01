@@ -34,8 +34,6 @@ def treatment_sum(our_tuple):
         return 'Недостаточно данных'
 
 
-
-
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 

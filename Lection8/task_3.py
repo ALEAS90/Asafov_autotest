@@ -18,14 +18,7 @@ def segment(coord1, coord2):
         return str(e)[::-1]
 
 
-
-
-
-
-
-
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
-
 
 data = [
     ((2, 3), (4, 5)),

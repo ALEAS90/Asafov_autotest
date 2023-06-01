@@ -33,9 +33,7 @@ class Trigon:
             raise Exception("Не треугольник")
 
 
-
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
-
 
 class MyTestCase(unittest.TestCase):
 
