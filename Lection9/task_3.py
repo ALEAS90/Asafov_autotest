@@ -7,48 +7,28 @@
 from pathlib import Path
 text_new = ''
 path = Path('C:\\development\\pythonProject\\Lection9\\test_file\\task_3.txt')
-
+sum_purches = 0
+counter = 0
+temp = None
+list_purch = []
 file = open(path, mode='r', encoding='utf-8')
-# print(file.readlines())
+three_most_expensive_purchases = []
+
+
 for line in file.readlines():
-    for symbol in line:
-        if symbol.isdigit() == True:
-            text_new += symbol
-    text_new += '\n'
+    temp = line.strip()
+    if not temp:
+        list_purch.append(sum_purches)
+        sum_purches = 0
+    else:
+        temp = int(temp)
+        sum_purches += temp
 
-print(text_new)
-# path_summ = Path('C://development//pythonProject//Lection9//summ.txt')
-# file_summ = open(path_summ, mode='w', encoding='utf-8')
-# file_summ.write(text_new)
-# # file_summ.close()
-# print(file_summ.readlines())
-# # print(path_summ.readlines())
-#
-# for i in range(3):
-#     for value in file_summ.readlines():
-#         if value.isdigit() == True:
-#             print(value)
-#
-#
-# #
-# # list = [text_new.split('\n')]
-# # print(list)
-#
-# # for val in text_new:
-#
+list_purch.sort(reverse=True)
+list_max = list_purch[0:3]
+three_most_expensive_purchases = sum(list_max)
+print(three_most_expensive_purchases)
 
 
-# for _ in range(3):
-#     key_max = None
-#     value_max = 0
-#     summ = 0
-#     for value in list:
-#         if value.isdigit() == True:
-#             print(value)
-#     #     if int(value) > value_max and value != '':
-#     #         value_max = int(value)
-#     # summ += value_max
-#     # print(summ)
 
-
-# assert three_most_expensive_purchases == 202346
+assert three_most_expensive_purchases == 202346
