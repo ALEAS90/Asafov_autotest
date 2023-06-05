@@ -15,23 +15,40 @@ for line in file.readlines():
         if symbol.isdigit() == True:
             text_new += symbol
     text_new += '\n'
-# print(text_new)
 
-list = []
-for file.readlines():
-    list.append(file.readlines())
-print(list)
+print(text_new)
+# path_summ = Path('C://development//pythonProject//Lection9//summ.txt')
+# file_summ = open(path_summ, mode='w', encoding='utf-8')
+# file_summ.write(text_new)
+# # file_summ.close()
+# print(file_summ.readlines())
+# # print(path_summ.readlines())
+#
+# for i in range(3):
+#     for value in file_summ.readlines():
+#         if value.isdigit() == True:
+#             print(value)
+#
+#
+# #
+# # list = [text_new.split('\n')]
+# # print(list)
+#
+# # for val in text_new:
+#
 
-for _ in range(3):
-    key_max = None
-    int_value = int(value)
-    value_max = 0
-    summ = 0
-    for int_value in text_new:
-        if int_value > value_max:
-            key_max = key
-            value_max = value
-    summ += value_max
+
+# for _ in range(3):
+#     key_max = None
+#     value_max = 0
+#     summ = 0
+#     for value in list:
+#         if value.isdigit() == True:
+#             print(value)
+#     #     if int(value) > value_max and value != '':
+#     #         value_max = int(value)
+#     # summ += value_max
+#     # print(summ)
 
 
-assert three_most_expensive_purchases == 202346
+# assert three_most_expensive_purchases == 202346
