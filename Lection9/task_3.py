@@ -15,6 +15,23 @@ for line in file.readlines():
         if symbol.isdigit() == True:
             text_new += symbol
     text_new += '\n'
-print(text_new)
+# print(text_new)
 
-# assert three_most_expensive_purchases == 202346
+list = []
+for file.readlines():
+    list.append(file.readlines())
+print(list)
+
+for _ in range(3):
+    key_max = None
+    int_value = int(value)
+    value_max = 0
+    summ = 0
+    for int_value in text_new:
+        if int_value > value_max:
+            key_max = key
+            value_max = value
+    summ += value_max
+
+
+assert three_most_expensive_purchases == 202346
