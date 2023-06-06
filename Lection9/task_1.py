@@ -11,7 +11,7 @@ text_new = ''
 
 for line in file.readlines():
     for symbol in line:
-        if symbol.isdigit() == False:
+        if not symbol.isdigit():
             text_new += symbol
 print(text_new)
 

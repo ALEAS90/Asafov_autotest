@@ -5,6 +5,7 @@
 
 # Здесь пишем код
 from pathlib import Path
+
 text_new = ''
 path = Path('C:\\development\\pythonProject\\Lection9\\test_file\\task_3.txt')
 sum_purches = 0
@@ -13,7 +14,6 @@ temp = None
 list_purch = []
 file = open(path, mode='r', encoding='utf-8')
 three_most_expensive_purchases = []
-
 
 for line in file.readlines():
     temp = line.strip()
@@ -28,7 +28,5 @@ list_purch.sort(reverse=True)
 list_max = list_purch[0:3]
 three_most_expensive_purchases = sum(list_max)
 print(three_most_expensive_purchases)
-
-
 
 assert three_most_expensive_purchases == 202346
