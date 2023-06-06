@@ -22,10 +22,12 @@ class Trigon:
         if len(args) != 3:
             raise IndexError(f"Передано {len(args)} аргументов, а ожидается 3")
         print(args)
-        # self.args = args[0]
-        # self.args1 = args[1]
-        # self.args2 = args[2]
-        if type(args[0]) != int or type(args[1]) != int or type(args[2]) != int:
+
+        self.args = args[0]
+        self.args1 = args[1]
+        self.args2 = args[2]
+
+        if isinstance(self.args, int) == False or isinstance(self.args1, int) == False or isinstance(self.args2, int) == False:
             raise TypeError('Стороны должны быть числами')
         if args[0] <= 0 or args[1] <= 0 or args[2] <= 0:
             raise ValueError('Стороны должны быть положительными')
