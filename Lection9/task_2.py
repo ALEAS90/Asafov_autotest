@@ -32,29 +32,41 @@
 
 
 import datetime
+from pathlib import Path
+
 file_log = 'log.txt'
 
 
+def func_log(test):  # декоратор
+    def wrapper():
+        path = Path('C:\development\pythonProject\Lection9\log.txt')
+        file_log = open(path, mode='w', encoding='utf-8')
+        print(file_log.readlines())
+        file_log.write(function.__name__)
+        # """Вызвали исходную функцию"""
+        function()
+        """Доработали функцию новым функционалом записи в файл"""
 
-def function(file_log):
-    date1 = datetime.datetime(day, month, hour, minute, second)
+        print(file_log.readlines())
+        file_log.write(str(func_log.__name__()) + "вызвана" + str(date1))
+        print(file_log)
+        file_log.close()
+    return wrapper
+
+
+
+
+def function():  # функция, которую декорируем
+
+    date1 = datetime.datetime.today
     format = '%d.%m %H:%M:%S'
     datetime.datetime.strptime(date1, format)
     print(date1)
-function()
 
-# def decorator(function):
-#     def wrapper():
-#         # """Вызвали исходную функцию"""
-#         function()
-#         """Доработали функцию новым функционалом записи в файл"""
-#         file_log = open(file_log, mode='w', encoding='utf-8')
-#         print(file_log.readlines())
-#         file_log.write(str(func_log.__name__()) + "вызвана" + str(date1))
-#         print(file_log)
-#         file_log.close()
-#     return wrapper
-#
-# decorator(function(file_log))
+
+f = func_log(function)
+f()
+
+
 
 
