@@ -41,8 +41,15 @@ def func_log(test):  # декоратор
     def wrapper():
         path = Path('C:\development\pythonProject\Lection9\log.txt')
         file_log = open(path, mode='w', encoding='utf-8')
-        print(file_log.readlines())
-        file_log.write(function.__name__)
+        dt = datetime.datetime.now()
+        format = '%d.%m %H:%M:%S'
+        datetime.datetime.strptime(dt, format)
+        file_log.write(function.__name__ + 'вызвана' + )
+
+
+
+
+        print(date1)
         # """Вызвали исходную функцию"""
         function()
         """Доработали функцию новым функционалом записи в файл"""
@@ -58,14 +65,11 @@ def func_log(test):  # декоратор
 
 def function():  # функция, которую декорируем
 
-    date1 = datetime.datetime.today
-    format = '%d.%m %H:%M:%S'
-    datetime.datetime.strptime(date1, format)
-    print(date1)
 
 
-f = func_log(function)
-f()
+
+# f = func_log(function)
+# f()
 
 
 
