@@ -39,7 +39,7 @@ file_log = 'log.txt'
 def function(file_log):
     date1 = datetime.datetime(day, month, hour, minute, second)
     format = '%d.%m %H:%M:%S'
-    datetime.datetime.strptime(date_str, format)
+    datetime.datetime.strptime(date1, format)
     print(date1)
 function()
 
