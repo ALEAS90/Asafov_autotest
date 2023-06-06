@@ -34,38 +34,61 @@
 import datetime
 from pathlib import Path
 
-file_log = 'log.txt'
+
 
 
 def func_log(test):  # декоратор
-    def wrapper():
+
+    def wrapper(file_log = 'log.txt'):
 
         """Доработали функцию новым функционалом записи в файл"""
-        path = Path('C:\development\pythonProject\Lection9\log.txt')
-        file_log = open(path, mode='w', encoding='utf-8')
+
         dt = datetime.datetime.now()
-        format = '%d.%m %H:%M:%S'
-        date_correct = datetime.datetime.strptime(dt, format)
-        file_log.write(function.__name__ + 'вызвана' + date_correct)
-        file_log.close()
+        date_correct = dt.strftime('%d.%m %H:%M:%S')
+        print(date_correct)
+        name_func = test.__name__ + ' вызвана ' + date_correct +'\n'
+        # print(name_func)
 
         # """Вызвали исходную функцию"""
-        function()
+        my_func()
 
+        path = Path('C:\development\pythonProject\Lection9').joinpath(file_log)
 
+        file_log = open(path, mode='a', encoding='utf-8')
+
+        file_log.write(name_func)
+        file_log.close()
 
     return wrapper
 
-
-
-def function():  # функция, которую декорируем
-    print('просто функция')
-
+    # wrapper.func_doc = test.func_doc
+    # wrapper.func_name = test.func_name
 
 
 
-f = func_log(function)
-f()
+
+
+
+
+def my_func():  # функция, которую декорируем
+    """
+    просто моя функция
+    :return:
+    """
+    pass
+    # print('просто функция')
+
+
+
+
+f = func_log(my_func)
+f('test.txt')
+
+a = help(f)
+print(a)
+
+b = help(my_func)
+print(b)
 
 
 
