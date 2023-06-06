@@ -38,7 +38,7 @@ from pathlib import Path
 def func_log(test):  # декоратор
 
     def wrapper(file_log='log.txt'):
-        """Доработали функцию новым функционалом записи в файл"""
+        """Декоратор, добавляющий функционал записи в файл"""
 
         dt = datetime.datetime.now()
         date_correct = dt.strftime('%d.%m %H:%M:%S')
