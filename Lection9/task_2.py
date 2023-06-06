@@ -39,37 +39,33 @@ file_log = 'log.txt'
 
 def func_log(test):  # декоратор
     def wrapper():
+
+        """Доработали функцию новым функционалом записи в файл"""
         path = Path('C:\development\pythonProject\Lection9\log.txt')
         file_log = open(path, mode='w', encoding='utf-8')
         dt = datetime.datetime.now()
         format = '%d.%m %H:%M:%S'
-        datetime.datetime.strptime(dt, format)
-        file_log.write(function.__name__ + 'вызвана' + )
+        date_correct = datetime.datetime.strptime(dt, format)
+        file_log.write(function.__name__ + 'вызвана' + date_correct)
+        file_log.close()
 
-
-
-
-        print(date1)
         # """Вызвали исходную функцию"""
         function()
-        """Доработали функцию новым функционалом записи в файл"""
 
-        print(file_log.readlines())
-        file_log.write(str(func_log.__name__()) + "вызвана" + str(date1))
-        print(file_log)
-        file_log.close()
+
+
     return wrapper
 
 
 
-
 def function():  # функция, которую декорируем
+    print('просто функция')
 
 
 
 
-# f = func_log(function)
-# f()
+f = func_log(function)
+f()
 
 
 
