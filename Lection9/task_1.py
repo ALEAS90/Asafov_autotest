@@ -5,9 +5,7 @@
 from pathlib import Path
 
 path = Path('C:/development/pythonProject/Lection9/test_file/task1_data.txt')
-# print((path.is_file()))
 file = open(path, mode='r', encoding='utf-8')
-# print(file.read())
 line = ''
 text_new = ''
 

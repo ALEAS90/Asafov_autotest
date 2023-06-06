@@ -35,8 +35,6 @@ import datetime
 from pathlib import Path
 
 
-
-
 def func_log(test):  # декоратор
 
     def wrapper(file_log = 'log.txt'):
@@ -47,7 +45,6 @@ def func_log(test):  # декоратор
         date_correct = dt.strftime('%d.%m %H:%M:%S')
         print(date_correct)
         name_func = test.__name__ + ' вызвана ' + date_correct +'\n'
-        # print(name_func)
 
         # """Вызвали исходную функцию"""
         my_func()
