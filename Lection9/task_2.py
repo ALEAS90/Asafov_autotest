@@ -61,8 +61,8 @@ def func_log(test):  # декоратор
 
     return wrapper
 
-    # wrapper.func_doc = test.func_doc
-    # wrapper.func_name = test.func_name
+    wrapper.func__doc__ = test.func_doc
+    wrapper.func__name__ = test.func_name
 
 
 
