@@ -14,7 +14,6 @@
 # iuy qnikkgxvxfxtxv
 
 import random
-import
 
 alpha = ('a','b','c','d','e','f','g')
 # random.randrange(start, stop, step)
@@ -35,7 +34,7 @@ def generate_random_name(alpha):
         s_w += random.choice(alpha)
     # print(f_w, s_w)
     yield str(f_w) + " " + str(s_w)
-    generate_random_name(alpha)
+
 # f_w = ''
 # s_w = ''
 
