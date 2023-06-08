@@ -14,4 +14,3 @@ class Test:
     def test_2(self):
         time.sleep(3)
 
-

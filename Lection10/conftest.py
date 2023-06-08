@@ -20,3 +20,4 @@ def for_class_fixt():
     print('\n', 'Время выполнения класса: ', datetime.datetime.now() - time_start_1)
 
 
+
