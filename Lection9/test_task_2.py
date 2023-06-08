@@ -35,19 +35,15 @@ import datetime
 from pathlib import Path
 
 
-
-
 def func_log(test):  # декоратор
 
-    def wrapper(file_log = 'log.txt'):
-
-        """Доработали функцию новым функционалом записи в файл"""
+    def wrapper(file_log='log.txt'):
+        """Декоратор, добавляющий функционал записи в файл"""
 
         dt = datetime.datetime.now()
         date_correct = dt.strftime('%d.%m %H:%M:%S')
         print(date_correct)
-        name_func = test.__name__ + ' вызвана ' + date_correct +'\n'
-        # print(name_func)
+        name_func = test.__name__ + ' вызвана ' + date_correct + '\n'
 
         # """Вызвали исходную функцию"""
         my_func()
@@ -61,13 +57,10 @@ def func_log(test):  # декоратор
 
     return wrapper
 
-    wrapper.func__doc__ = test.func_doc
-    wrapper.func__name__ = test.func_name
 
 
-
-
-
+    # wrapper.func__doc__ = test.func_doc
+    # wrapper.func__name__ = test.func_name
 
 
 def my_func():  # функция, которую декорируем
@@ -79,8 +72,6 @@ def my_func():  # функция, которую декорируем
     # print('просто функция')
 
 
-
-
 f = func_log(my_func)
 f('test.txt')
 
@@ -89,7 +80,3 @@ print(a)
 
 b = help(my_func)
 print(b)
-
-
-
-
